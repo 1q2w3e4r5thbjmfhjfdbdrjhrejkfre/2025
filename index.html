@@ -1,0 +1,65 @@
+QUESTÃO 1 
+import java.util.Scanner;
+
+public class Calc { public static void main(String[] args) { Scanner s = new Scanner(System.in); System.out.print("Num1: "); double a = s.nextDouble(); System.out.print("Num2: "); double b = s.nextDouble(); System.out.print("Op (A-Soma, B-Sub, C-Mult, D-Div): "); switch (s.next().toUpperCase().charAt(0)) { case 'A': System.out.println(a + b); break; case 'B': System.out.println(a - b); break; case 'C': System.out.println(a * b); break; case 'D': System.out.println(b != 0 ? a / b : "Erro"); break; default: System.out.println("Inválido"); } s.close(); } }
+
+
+
+Questão 2
+import javax.swing.JOptionPane;
+
+public class DescontoSimples { public static void main(String[] args) { double valor = Double.parseDouble(JOptionPane.showInputDialog("Valor do produto:")); int codigo = Integer.parseInt(JOptionPane.showInputDialog("Código de desconto:"));
+
+double desconto = (codigo == 1) ? 0.05 : (codigo == 2) ? 0.10 : (codigo == 3) ? 0.20 : (codigo == 4) ? 0.50 : -1;
+    
+    if (desconto >= 0) {
+        JOptionPane.showMessageDialog(null, "Valor com desconto: R$ " + (valor * (1 - desconto)));
+    } else {
+        JOptionPane.showMessageDialog(null, "Código inválido!");
+    }
+}
+
+
+
+1 questão 
+import java.util.Scanner;
+
+public class Calc { public static void main(String[] args) { Scanner s = new Scanner(System.in);
+
+System.out.print("Num1: ");
+    double a = s.nextDouble();
+    
+    System.out.print("Num2: ");
+    double b = s.nextDouble();
+    
+    System.out.print("Op (A-Soma, B-Sub, C-Mult, D-Div): ");
+    char op = s.next().toUpperCase().charAt(0);
+    
+    switch (op) {
+        case 'A':
+            System.out.println("Resultado: " + (a + b));
+            break;
+        case 'B':
+            System.out.println("Resultado: " + (a - b));
+            break;
+        case 'C':
+            System.out.println("Resultado: " + (a * b));
+            break;
+        case 'D':
+            if (b != 0) {
+                System.out.println("Resultado: " + (a / b));
+            } else {
+                System.out.println("Erro: Divisão por zero");
+            }
+            break;
+        default:
+            System.out.println("Operação inválida");
+    }
+    
+    s.close();
+}
+
+}
+
+
+}
